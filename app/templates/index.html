@@ -1,0 +1,16 @@
+{% extends './layout.html' %}
+{% block title %}{{data.titulo}}{% endblock %}
+{% block body %}
+<h1>{{ data.bienvenida }}</h1>
+{% if data.long > 0 %}
+<ul>
+    {% for x in data.lista %}
+    <li>{{ x }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h2>
+    No existe lista...
+</h2>
+{% endif %}
+{% endblock %}
